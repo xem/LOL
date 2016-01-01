@@ -26,6 +26,9 @@ SOON:
 - http://xem.github.io/LOL/2014-03.html
 - http://xem.github.io/LOL/2014-02.html
 - http://xem.github.io/LOL/2014-01.html
+
+AVAILABLE:
+
 - http://xem.github.io/LOL/2013-12.html
 - http://xem.github.io/LOL/2013-11.html
 - http://xem.github.io/LOL/2013-10.html
@@ -38,9 +41,6 @@ SOON:
 - http://xem.github.io/LOL/2013-03.html
 - http://xem.github.io/LOL/2013-02.html
 - http://xem.github.io/LOL/2013-01.html
-
-AVAILABLE:
-
 - http://xem.github.io/LOL/2012-12.html
 - http://xem.github.io/LOL/2012-11.html
 - http://xem.github.io/LOL/2012-10.html
