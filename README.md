@@ -1,6 +1,6 @@
 All the funny or interesting images I find online each month:
 
-
+- http://xem.github.io/LOL/2016-01.html
 - http://xem.github.io/LOL/2015-12.html
 - http://xem.github.io/LOL/2015-11.html
 - http://xem.github.io/LOL/2015-10.html
