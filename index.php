@@ -5,6 +5,7 @@
   <title>Images lol</title>
   <style>
     * { margin: 0; padding: 0; }
+    img { max-width: 80vw }
     html, body { width: 100%; height: 100%; font-family: Arial; }
     div.menu { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: auto; float: left; position: fixed; top: 0; left: 0; width: 160px; height: 100%; background: #eee; padding: 20px; text-align: center; }
     div.menu a { text-decoration: none; }
@@ -48,7 +49,7 @@
               allowScriptAccess: "always",
               allowFullScreen: "true",
               wmode: "transparent",
-              flashvars: "fichier=http%3A//meuziere.free.fr/lol/' . $currentyear . "/" . $currentweek . "/" . $image . '"
+              flashvars: "fichier=https%3A//xem.github.io/LOL/' . $currentyear . "/" . $currentweek . "/" . $image . '"
             };
             var attributes_' . $videos . ' = {};
             flashObject("http://flash.supportduweb.com/lecteur_flv/v1_27.swf", "lecteur_' . $videos . '", "576", "324", "8", false, flashvars_' . $videos . ', params_' . $videos . ', attributes_' . $videos . ');
