@@ -5,7 +5,7 @@
   <title>Images lol</title>
   <style>
     * { margin: 0; padding: 0; }
-    img { max-width: 80vw }
+    img { max-width: 70vw; min-width: 40vw; }
     html, body { width: 100%; height: 100%; font-family: Arial; }
     div.menu { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: auto; float: left; position: fixed; top: 0; left: 0; width: 160px; height: 100%; background: #eee; padding: 20px; text-align: center; }
     div.menu a { text-decoration: none; }
@@ -19,11 +19,8 @@
   if(isset($_GET["year"])){
     $currentyear = $_GET["year"];
   }
-  if(isset($_GET["week"])){
-    $currentweek = $_GET["week"];
-  }
-  echo "  <br><br><br>\n  <h1>$currentyear - $currentweek</h1>\n";
-  $images = opendir("$currentyear/$currentweek");
+  echo "  <br><br><br>\n  <h1>$currentyear</h1>\n";
+  $images = opendir("$currentyear");
   
   $videos = 0;
   while($image = readdir($images)){
@@ -49,7 +46,7 @@
               allowScriptAccess: "always",
               allowFullScreen: "true",
               wmode: "transparent",
-              flashvars: "fichier=https%3A//xem.github.io/LOL/' . $currentyear . "/" . $currentweek . "/" . $image . '"
+              flashvars: "fichier=https%3A//xem.github.io/LOL/' . $currentyear . "/" . $image . '"
             };
             var attributes_' . $videos . ' = {};
             flashObject("http://flash.supportduweb.com/lecteur_flv/v1_27.swf", "lecteur_' . $videos . '", "576", "324", "8", false, flashvars_' . $videos . ', params_' . $videos . ', attributes_' . $videos . ');
@@ -59,11 +56,11 @@
 				if(strpos($image, " ")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
-        echo "<br><a href=\"$currentyear/$currentweek/" . $image ."\">télécharger la vidéo </a><br><br><br><br><br>\n";
+        echo "<br><a href=\"$currentyear/" . $image ."\">télécharger la vidéo </a><br><br><br><br><br>\n";
       }
       
       else{
-        echo "  <br><br><br><br><br>\n  <img src=\"$currentyear/$currentweek/" . $image ."\">";
+        echo "  <br><br><br><br><br>\n  <img src=\"$currentyear/" . $image ."\">";
         if(strpos($image, " ")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
