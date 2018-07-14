@@ -61,7 +61,7 @@
       
       else{
         echo "  <br><br><br><br><br>\n  <img src=\"$currentyear/" . $image ."\">";
-        if(strpos($image, " ")){
+        if(strpos($image, " ") && !strpos($image, " large") && !strpos($image, "(1)")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
         echo "\n  <br><br><br><br><br>\n";
