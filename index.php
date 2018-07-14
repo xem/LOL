@@ -31,28 +31,8 @@
         $videos++;
         
         echo 
-        "<br><br><br><br><br>\n  "
-        .
-        '<div style="display:inline-block; border: 2px solid #aaa">
-          <script type="text/javascript" src="http://www.supportduweb.com/page/js/flashobject.js"></script>
-            <div id="lecteur_' . $videos . '" style="display:inline-block;">
-            </div>
-            <script type="text/javascript">
-            //<!--
-            var flashvars_' . $videos . ' = {};
-            var params_' . $videos . ' = {
-              quality: "high",
-              bgcolor: "#000000",
-              allowScriptAccess: "always",
-              allowFullScreen: "true",
-              wmode: "transparent",
-              flashvars: "fichier=https%3A//xem.github.io/LOL/' . $currentyear . "/" . $image . '"
-            };
-            var attributes_' . $videos . ' = {};
-            flashObject("http://flash.supportduweb.com/lecteur_flv/v1_27.swf", "lecteur_' . $videos . '", "576", "324", "8", false, flashvars_' . $videos . ', params_' . $videos . ', attributes_' . $videos . ');
-            //-->
-          </script>
-        </div>';
+        "<br><br><br><br><br>\n  " . '<video width=700 src="' . $currentyear . '/' . $image . '" controls></video>';
+         
 				if(strpos($image, " ")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
