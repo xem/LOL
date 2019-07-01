@@ -1,25 +1,29 @@
 ﻿<div id=menu>
-<!--h2>LOL</h2-->
+<h2>Xem's LOL</h2>
 <ul>
-<li><a href="javascript:;" onclick="show('2011/06')">2011</a>
-<li><a href="javascript:;" onclick="show('2012')">2012</a>
-<li><a href="javascript:;" onclick="show('2013')">2013</a>
-<li><a href="javascript:;" onclick="show('2014')">2014</a>
-<li><a href="javascript:;" onclick="show('2015')">2015</a>
-<li><a href="javascript:;" onclick="show('2016')">2016</a>
-<li><a href="javascript:;" onclick="show('2017')">2017</a>
-<li><a href="javascript:;" onclick="show('2018')">2018</a>
-<li><a href="javascript:;" onclick="show('2019-1')">2019-1</a>
+<li><a id="menu-2011" href="javascript:;" onclick="show('2011/06')">2011</a>
+<li><a id="menu-2012" href="javascript:;" onclick="show('2012')">2012</a>
+<li><a id="menu-2013" href="javascript:;" onclick="show('2013')">2013</a>
+<li><a id="menu-2014" href="javascript:;" onclick="show('2014')">2014</a>
+<li><a id="menu-2015" href="javascript:;" onclick="show('2015')">2015</a>
+<li><a id="menu-2016" href="javascript:;" onclick="show('2016')">2016</a>
+<li><a id="menu-2017" href="javascript:;" onclick="show('2017')">2017</a>
+<li><a id="menu-2018" href="javascript:;" onclick="show('2018')">2018</a>
+<li><a id="menu-2019-1" href="javascript:;" onclick="show('2019-1')">2019-1</a>
 </ul>
 </div>
 
 <div id=imgs>
-
 </div>
 
 
 <script>
 show = folder => {
+
+  var a = document.querySelector(".selected");
+  if(a) a.classList.remove("selected");
+  var b = document.querySelector("#menu-"+folder);
+  if(b) b.classList.add("selected");
 
   imgs.innerHTML = "";
   x = new XMLHttpRequest();x.open("GET", "https://github.com/xem/LOL/tree/gh-pages/" + folder, 1);
@@ -39,7 +43,9 @@ show = folder => {
 
 <style>
 * { padding: 0; margin: 0; font-family: arial; box-sizing: border-box; }
+body, html { overflow: hidden}
 #menu { float: left; width: 150px; height: 96vh; background: #eee; padding: 20px; margin: 10px; }
 #menu ul { padding: 10px 0 0 10px }
-#imgs { float: left; width: calc(100% - 250px); padding-left: 250px; text-align: center; height: 96vh; overflow: auto; }
+#imgs { float: right; width: calc(100% - 160px); padding-left: 250px; text-align: center; height: 96vh; overflow: hidden auto; }
+.selected, .selected:link, .selected:visited { font-weight: bold; color: #000 }
 </style>
