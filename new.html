@@ -1,0 +1,45 @@
+﻿<div id=menu>
+<!--h2>LOL</h2-->
+<ul>
+<li><a href="javascript:;" onclick="show('2011/06')">2011</a>
+<li><a href="javascript:;" onclick="show('2012')">2012</a>
+<li><a href="javascript:;" onclick="show('2013')">2013</a>
+<li><a href="javascript:;" onclick="show('2014')">2014</a>
+<li><a href="javascript:;" onclick="show('2015')">2015</a>
+<li><a href="javascript:;" onclick="show('2016')">2016</a>
+<li><a href="javascript:;" onclick="show('2017')">2017</a>
+<li><a href="javascript:;" onclick="show('2018')">2018</a>
+<li><a href="javascript:;" onclick="show('2019-1')">2019-1</a>
+</ul>
+</div>
+
+<div id=imgs>
+
+</div>
+
+
+<script>
+show = folder => {
+
+  imgs.innerHTML = "";
+  x = new XMLHttpRequest();x.open("GET", "https://github.com/xem/LOL/tree/gh-pages/" + folder, 1);
+  x.send();
+  x.onload = e => {
+    files = [];
+    y = x.response.replace(/[\r\n]*/g, "").replace(/<td class="content">\s*<span.*?>\s*<a.*?>\s*(.*?)\s*<\/a>\s*<\/span>\s*<\/td>/g, (a,b)=>files.push(b));
+    console.log(files)
+    for(i in files){
+      imgs.innerHTML+= "<br><br><img src='//xem.github.io/LOL/" + folder + "/" + files[i] + "'>";
+    }
+  }
+
+}
+
+</script>
+
+<style>
+* { padding: 0; margin: 0; font-family: arial; box-sizing: border-box; }
+#menu { float: left; width: 150px; height: 96vh; background: #eee; padding: 20px; margin: 10px; }
+#menu ul { padding: 10px 0 0 10px }
+#imgs { float: left; width: calc(100% - 250px); padding-left: 250px; text-align: center; height: 96vh; overflow: auto; }
+</style>
