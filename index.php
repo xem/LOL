@@ -6,7 +6,7 @@
   <style>
     * { margin: 0; padding: 0; }
     img { max-width: 70vw; min-width: 40vw; }
-    html, body { width: 100%; height: 100%; font-family: Arial; }
+    html, body { width: 100%; height: 100%; font-family: Arial; font-size: 40px; }
     div.menu { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: auto; float: left; position: fixed; top: 0; left: 0; width: 160px; height: 100%; background: #eee; padding: 20px; text-align: center; }
     div.menu a { text-decoration: none; }
     div.content { text-align: center; }
@@ -40,7 +40,7 @@
       }
       
       else{
-        echo "  <br><br><br><br><br>\n  <img src=\"$currentyear/" . $image ."\">";
+        echo "  <br><br><br><br><br><br><br>\n  <img src=\"$currentyear/" . $image ."\">";
         if(strpos($image, " ") && !strpos($image, " large") && !strpos($image, "(1)")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
