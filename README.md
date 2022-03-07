@@ -1,5 +1,6 @@
 All the funny or interesting images I find online:
 
+- http://xem.github.io/LOL/2021.html
 - http://xem.github.io/LOL/2020.html
 - http://xem.github.io/LOL/2019-2.html
 - http://xem.github.io/LOL/2019-1.html

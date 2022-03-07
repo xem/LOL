@@ -5,7 +5,8 @@
   <title>Images lol</title>
   <style>
     * { margin: 0; padding: 0; }
-    img { max-width: 70vw; min-width: 40vw; }
+    img { max-width: 90vw; min-width: 300px; }
+    video { max-width: 800px; min-width: 300px; }
     html, body { width: 100%; height: 100%; font-family: Arial; font-size: 40px; }
     div.menu { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: auto; float: left; position: fixed; top: 0; left: 0; width: 160px; height: 100%; background: #eee; padding: 20px; text-align: center; }
     div.menu a { text-decoration: none; }
@@ -31,7 +32,7 @@
         $videos++;
         
         echo 
-        "<br><br><br><br><br>\n  " . '<video width=700 src="' . $currentyear . '/' . $image . '" controls></video>';
+        "<br><br><br>\n  " . '<video width=700 src="' . $currentyear . '/' . $image . '" controls></video>';
          
 				if(strpos($image, " ")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
@@ -44,7 +45,7 @@
         if(strpos($image, " ") && !strpos($image, " large") && !strpos($image, "(1)")){
           echo "\n  <br>\n  <h3>" . substr($image, 0, -4) . "</h3>";
         }
-        echo "\n  <br><br><br><br><br>\n";
+        echo "\n  <br><br><br>\n";
       }
     }
   }
